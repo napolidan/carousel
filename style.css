@@ -1,0 +1,62 @@
+:root {
+    --scrollspeed: 0.5s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(16, 16, 16);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel {
+    width: 50%;
+    aspect-ratio: 8 / 6;
+    margin: auto;
+    position: relative;
+}
+
+.carouselimg {
+    transition: all var(--scrollspeed) ease;
+}
+
+img {
+    width: 100%;
+    position: absolute;
+}
+
+.beforeimg {
+    transform: scale(70%) translateX(-60%);
+    filter: blur(2px) contrast(90%) brightness(0.5);
+    z-index: 2;
+}
+
+.afterimg {
+    transform: scale(70%) translateX(60%);
+    filter: blur(2px) contrast(90%) brightness(0.5);
+    z-index: 2;
+}
+
+.selectedimg {
+    transform: translate(0px);
+    filter: blur(0px) contrast(130%);
+    z-index: 3;
+}
+
+.hideimg {
+    transform: scale(50%);
+    filter: blur(2px) contrast(90%) brightness(0.5);
+    z-index: 1;
+}
