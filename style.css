@@ -35,6 +35,9 @@ body {
 img {
     width: 100%;
     position: absolute;
+    user-select: none;
+    -webkit-user-drag: none; /* For Safari */
+    user-drag: none; /* General syntax */
 }
 
 .beforeimg {
